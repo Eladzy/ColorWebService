@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ColorDataAccess.Model
 {
-    public class Color : IColor
+    public class Color : IColor//poco class representing color
     {
         public int Id { get; set; }
         public string Name { get; set; }

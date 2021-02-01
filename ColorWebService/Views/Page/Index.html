@@ -11,6 +11,7 @@
     <script src="../../Scripts/Color.js"></script>
     <script src="../../Scripts//populateTable.js"></script>
     <script src="../../Scripts/addColor.js"></script>
+    <script src="../../Scripts/editColor.js"></script>
 </head>
 
 <body>
@@ -43,7 +44,9 @@
 
         <form id="edit_form" class="form-inline">
             <div class="form-group">
-                <select class="form-control" id="id_select" required></select>
+                <select class="form-control" id="id_select" required>
+                    <option value="" disabled selected>ID</option>
+                </select>
             </div>
             <div class="form-group">
                 <label class="sr-only" for="edit_color_name">Color Name</label>
@@ -58,7 +61,7 @@
                     <input type="checkbox" id="edit_available"> Available
                 </label>
             </div>
-            <button type="submit" class="btn btn-default edit_btn">Add Color</button>
+            <button type="submit" class="btn btn-default edit_btn">Edit Color</button>
         </form>
     </div>
 

@@ -7,7 +7,7 @@ namespace ColorDataAccess
 {
     public class Singleton
     {
-        private static Singleton _instance;
+        private static Singleton _instance;//dependency injection verifies one access at a time
         private static readonly object Key = new object();
         private Singleton()
         {
@@ -28,7 +28,7 @@ namespace ColorDataAccess
             return _instance;
         }
 
-        public Facade.IColorFacade GetFacade()
+        public Facade.IColorFacade GetFacade()//retrieves facade class
         {
             return new Facade.ColorFacade();
         }

@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace ColorDataAccess.Facade
 {
-    class ColorFacade : IColorFacade
+    class ColorFacade : IColorFacade//wraps the dao functions and ajusting them
     {
         private InventoryDAO Inventory = new InventoryDAO();
 

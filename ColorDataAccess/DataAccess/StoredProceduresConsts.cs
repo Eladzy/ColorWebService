@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ColorDataAccess.DataAccess
 {
-    public static class StoredProceduresConsts
+    public static class StoredProceduresConsts//stores the names of stored procedures
     {
         public const string INSERT_COLOR = "INSERT_COLOR";
 

@@ -12,13 +12,13 @@ using System.Web.Http.Description;
 
 namespace ColorWebService.Controllers
 {
-    [RoutePrefix("api")]
+    [RoutePrefix("api")]/// api prefix
     public class ColorController : ApiController
     {
         [ResponseType(typeof(IEnumerable<Color>))]
         [HttpGet]
         [Route("inventory")]
-        public IHttpActionResult GetInventory()
+        public IHttpActionResult GetInventory()//fetch all inventory
         {
             
             try
@@ -37,7 +37,7 @@ namespace ColorWebService.Controllers
         [ResponseType(typeof(Color))]
         [HttpGet]
         [Route("color/{id}")]
-        public IHttpActionResult GetColor([FromUri]int id)
+        public IHttpActionResult GetColor([FromUri]int id)//fetch specific color by id
         {
             if (id == 0)
             {
@@ -57,12 +57,12 @@ namespace ColorWebService.Controllers
         }
 
         [HttpPost]
-        [Route("addcolor")]
+        [Route("addcolor")]//inserts color
         public IHttpActionResult AddColor([FromBody] JObject jcolor )
         {
-            Color color = JsonConvert.DeserializeObject<Color>(jcolor.ToString());
             try
             {
+                Color color = JsonConvert.DeserializeObject<Color>(jcolor.ToString());
                 Singleton.GetInstance().GetFacade().Insert(color);
                 return Ok();
             }
@@ -74,18 +74,12 @@ namespace ColorWebService.Controllers
         }
 
         [HttpPut]
-        [Route("updatecolor")]
-        public IHttpActionResult UpdateColor([FromBody] string[] data)
+        [Route("updatecolor")]//updates color
+        public IHttpActionResult UpdateColor([FromBody] JObject data)
         {
-            Color color = new Color
-            {
-                Id = int.Parse(data[0]),
-                Name = data[1],
-                HexCode = data[2],
-                IsAvailable = data[3] == "true" ? true : false
-            };
             try
             {
+                 Color color = JsonConvert.DeserializeObject<Color>(data.ToString());
                 Singleton.GetInstance().GetFacade().Update(color);
                 return Ok();
             }
@@ -97,7 +91,7 @@ namespace ColorWebService.Controllers
         }
 
         [HttpDelete]
-        [Route("delete/{id}")]
+        [Route("delete/{id}")]//deletes  color by id
         public IHttpActionResult DeleteColor([FromUri] int id)
         {
             try

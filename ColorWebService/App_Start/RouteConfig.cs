@@ -16,7 +16,7 @@ namespace ColorWebService
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Page", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Page", action = "Index", id = UrlParameter.Optional }//modified to start up at my own created page
             );
         }
     }
