@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorWebService", "ColorWebService\ColorWebService.csproj", "{0FC80FF1-74D3-4472-90B1-2CB0163582B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorDataAccess", "ColorDataAccess\ColorDataAccess.csproj", "{46F3D414-7A01-462F-AF8B-BAFA7DE9ABC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FC80FF1-74D3-4472-90B1-2CB0163582B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC80FF1-74D3-4472-90B1-2CB0163582B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC80FF1-74D3-4472-90B1-2CB0163582B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC80FF1-74D3-4472-90B1-2CB0163582B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F3D414-7A01-462F-AF8B-BAFA7DE9ABC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F3D414-7A01-462F-AF8B-BAFA7DE9ABC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F3D414-7A01-462F-AF8B-BAFA7DE9ABC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F3D414-7A01-462F-AF8B-BAFA7DE9ABC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B74DA1C9-06F4-43CE-B782-9CF8854B470B}
+	EndGlobalSection
+EndGlobal
