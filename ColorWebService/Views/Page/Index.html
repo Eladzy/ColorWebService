@@ -39,10 +39,10 @@
                     <input type="checkbox" id="add_available"> Available
                 </label>
             </div>
-            <input type="submit" id="btn_submit" class="btn btn-default add_btn">Add Color</input>
+            <input type="submit" id="btn_submit" class="btn btn-default add_btn" value="Add Color">
         </form>
 
-        <form id="edit_form" class="form-inline">
+        <form id="edit_form" method="POST" class="form-inline">
             <div class="form-group">
                 <select class="form-control" id="id_select" required>
                     <option value="" disabled selected>ID</option>
@@ -61,7 +61,7 @@
                     <input type="checkbox" id="edit_available"> Available
                 </label>
             </div>
-            <button type="submit" class="btn btn-default edit_btn">Edit Color</button>
+            <input id="btn_edit" type="submit" class="btn btn-default edit_btn" value="Edit Color">
         </form>
     </div>
 

@@ -11,11 +11,18 @@
             type: "POST",
             // dataType: "application/json",
             data: { "Name": data[0], "HexCode": data[1], "IsAvailable": data[2] = false },
-            success: onSuccess(),
+            success: function (data, status, xhr) {
+                location.reload();
+            },
             error: function (res, status) {
-                console.log("error");
+                console.log("error")
             }
+            //     location.reload()
+            //     // $("#add_color_name").text() = "";
+            //     // $("#add_hex_code").text() = "";
+            //     // $("#add_available").attr('checked') = false;
 
+            // }
         })
     })
 })
