@@ -6,9 +6,9 @@ namespace ColorDataAccess.DataAccess
     interface IInventoryDAO
     {
         void DeleteColor(int id);
-        Color GetColor(int id);
-        IList<Color> GetColors();
-        void UpdateColor(Color color);
-        void InsertColor(Color color);
+        IColor GetColor(int id);
+        IList<IColor> GetColors();
+        void UpdateColor(IColor color);
+        void InsertColor(IColor color);
     }
 }

@@ -16,7 +16,7 @@ namespace ColorDataAccess.DataAccess
     {
         private string connectionString = Utils.Utils.ConnectionString;
 
-        public Color GetColor(int id)
+        public IColor GetColor(int id)
         {
             Color color = new Color();
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -45,9 +45,9 @@ namespace ColorDataAccess.DataAccess
         }
 
 
-        public IList<Color> GetColors()
+        public IList<IColor> GetColors()
         {
-            List<Color> colors = new List<Color>();
+            List<IColor> colors = new List<IColor>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(StoredProceduresConsts.GET_INVENTORY, connection))
@@ -73,7 +73,7 @@ namespace ColorDataAccess.DataAccess
             return colors;
         }
 
-        public void UpdateColor(Color color)
+        public void UpdateColor(IColor color)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -91,7 +91,7 @@ namespace ColorDataAccess.DataAccess
             }
         }
 
-        public void InsertColor(Color color)
+        public void InsertColor(IColor color)
         {
             using(SqlConnection connection=new SqlConnection(connectionString))
             {

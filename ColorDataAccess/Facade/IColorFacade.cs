@@ -6,9 +6,9 @@ namespace ColorDataAccess.Facade
     public interface IColorFacade
     {
         void Delete(int id);
-        Color Get(int id);
-        IList<Color> GetAll();
-        void Update(Color color);
-        void Insert(Color color);
+        IColor Get(int id);
+        IList<IColor> GetAll();
+        void Update(IColor color);
+        void Insert(IColor color);
     }
 }

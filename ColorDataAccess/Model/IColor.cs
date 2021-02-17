@@ -1,6 +1,6 @@
 ﻿namespace ColorDataAccess.Model
 {
-    interface IColor
+    public interface IColor
     {
         string HexCode { get; set; }
         int Id { get; set; }

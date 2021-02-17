@@ -23,8 +23,8 @@ namespace ColorWebService.Controllers
             
             try
             {
-                List<Color> colors = new List<Color>();
-                colors = Singleton.GetInstance().GetFacade().GetAll().ToList();
+              //  List<IColor> colors =new List<IColor>();
+               IEnumerable<IColor> colors = Singleton.GetInstance().GetFacade().GetAll();
                 return Ok(colors);
             }
             catch (Exception)
@@ -46,7 +46,7 @@ namespace ColorWebService.Controllers
           
             try
             {
-                Color color = Singleton.GetInstance().GetFacade().Get(id);
+                IColor color = Singleton.GetInstance().GetFacade().Get(id);
                 return Ok(color);
             }
             catch (Exception)
@@ -58,11 +58,10 @@ namespace ColorWebService.Controllers
 
         [HttpPost]
         [Route("addcolor")]//inserts color
-        public IHttpActionResult AddColor([FromBody] JObject jcolor )
-        {
+        public IHttpActionResult AddColor([FromBody] Color color )
+        {           
             try
             {
-                Color color = JsonConvert.DeserializeObject<Color>(jcolor.ToString());
                 Singleton.GetInstance().GetFacade().Insert(color);
                 return Ok();
             }

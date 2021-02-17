@@ -11,29 +11,29 @@ namespace ColorDataAccess.Facade
     {
         private InventoryDAO Inventory = new InventoryDAO();
 
-        public Color Get(int id)
+        public IColor Get(int id)
         {
 
             return Inventory.GetColor(id);
         }
         
-        public void Insert(Color color)
+        public void Insert(IColor color)
         {
             Inventory.InsertColor(color);
         }
 
-        public IList<Color> GetAll()
+        public IList<IColor> GetAll()
         {
             return Inventory.GetColors();
         }
 
-        public void Update(Color color)
+        public void Update(IColor color)
         {
             if (color.Id == 0)
             {
                 return;
             }
-            Color comparer = Get(color.Id);
+            IColor comparer = Get(color.Id);
             foreach (PropertyInfo property in color.GetType().GetProperties())
             {
                 if (property.GetValue(color) is string)

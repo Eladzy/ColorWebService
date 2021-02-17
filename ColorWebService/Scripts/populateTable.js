@@ -16,7 +16,7 @@ $(document).ready(() => {
                     + "<td>" + aColor.name + "</td>"
                     + "<td>" + aColor.hexcode + "</td>"
                     + "<td>" + aColor.availability + "</td>"
-                    + "<td>" + `<button type="button" class="delete_btn">Delete</button><button type="button" class="edit_btn">Edit</button>` + "</tr>"
+                    + "<td>" + `<button type="button" class="delete_btn">Delete</button>` + "</tr>"
                 )
             })
         }).catch((err) => { console.log(err) })
