@@ -10,7 +10,7 @@
             url: "api/addcolor",
             type: "POST",
             // dataType: "application/json",
-            data: { "Name": data[0], "HexCode": data[1], "IsAvailable": data[2] = false },
+            data: { "Name": data[0], "HexCode": data[1], "IsAvailable": data[2] },
             success: function (data, status, xhr) {
                 location.reload();
             },
